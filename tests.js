@@ -14,8 +14,8 @@ Tests.testGenerate = function(errors) {
 };
 
 Tests.testDeal = function(errors) {
-  if (Deck.deal().length !== 2) {
-    errors.push('deal: deal should return a valid card key');
+  if (Deck.deal()>0 ) {
+    errors.push('deal: deal should return a card index number');
   }
 }
 

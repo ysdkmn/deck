@@ -53,11 +53,13 @@ const Deck = {
 
   deal() {
     // deal a card from the deck:
-    // create array of indexes of all cards remaining in deck
+    // create array of all cards remaining in deck
     var remainingCards = [];
     for (var key in this._deck) {
-      if (this._deck[key].remaining > 0) {
+      var cardMultiple = this._deck[key].remaining;
+      while (cardMultiple > 0) {
         remainingCards.push(key);
+        cardMultiple --;
       }
     }
     // throw error if there are no cards remaining in deck
@@ -71,11 +73,5 @@ const Deck = {
     // remove card from deck and return card index number
     this._deck[cardIndex].remaining--;
     return cardIndex;
-  },
-
-  showDeck() {
-    for (var key in this._deck) {
-      $('h1').append(`<img style="width: 5rem;" src='${this._deck[key].img}'>`);
-    }
   }
 };

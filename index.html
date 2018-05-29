@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Deck Development Tests</title>
-  <script type="text/javascript" src="./deck.js"></script>
-  <script type="text/javascript" src="./tests.js"></script>
+  <title>French Deck</title>
 </head>
-<body>
-  <h1>Deck Development Tests</h1>
+
+<body style="background-color:rgb(76, 154, 88);">
+  <h1 style="color:red; text-align:center;">52 Card "French" Deck</h1>
+  <div></div>
+  <h3>This is a typical 52 card "French" deck that can be used for any card game involving one or more decks.</h3>
+  <h3>To start, generate a deck (default) or a "shoe" of decks using the <i style="color:blue;">Deck.generate(numeberOfDecks)</i> method. The number of decks defaults to one if no value is entered for the <i style="color:blue;">numberOfDecks</i> property.
+  </h3>
+  <h3>The deck that is generated is an object consisting of one utility object at index <span style="color:gray;">"0"</span> and 52 card objects.</h3>
+  <h3>Each card object has the following properties:
+    <ul>
+      <li>rank: 2 through Ace</li>
+      <li>suit: Hearts, Spades, Diamonds, or Clubs</li>
+      <li>value: numerical value of the card where face cards are given a value of 10 and Aces are given an array containing two values (1 & 11).</li>
+      <li>img: local address of corresponding card image</li>
+      <li>remaining: integer representing the number of copies of the card that remain in the deck (eg. 1 for a regular deck, 6 for a 6 deck shoe, etc.)</li>
+    </ul>
+  </h3>
+  <h4 style="color:blue;">
+    Deck.deck = {<br />
+    <span style="color:rgb(76, 154, 88);">....</span>0: {<br />
+    <span style="color:rgb(76, 154, 88);">......</span>img: <i>local address for the back of card image</i><br />
+    <span style="color:rgb(76, 154, 88);">....</span>},<br />
+    <span style="color:rgb(76, 154, 88);">....</span>1: {<br />
+    <span style="color:rgb(76, 154, 88);">......</span>rank: 2,<br />
+    <span style="color:rgb(76, 154, 88);">......</span>suit: Hearts,<br />
+    <span style="color:rgb(76, 154, 88);">......</span>value: 2,<br />
+    <span style="color:rgb(76, 154, 88);">......</span>img: <i>local address for the 2 of Hearts card image</i>,<br />
+    <span style="color:rgb(76, 154, 88);">......</span>remaining: <i>ineteger; number of 2 of Hearts left in deck/shoe</i><br />
+    <span style="color:rgb(76, 154, 88);">....</span>}<br />
+    <span style="color:rgb(76, 154, 88);">....</span>2: {...}...
+  </h4>
+  <h3> Deal a card from the deck using <i style="color:blue;">Deck.deal()</i>. This method chooses a card at random from the cards remaining in the deck, removes the card from the deck, and returns the card's index number (key) as an integer.</h3>
+  <h2> Enjoy! </h2>
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./deck.js"></script>
+<script type="text/javascript" src="./tests.js"></script>
+<script type="text/javascript" src="./main.js"></script>
+
 </html>
